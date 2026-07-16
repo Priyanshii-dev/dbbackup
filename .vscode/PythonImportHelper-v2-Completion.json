@@ -1,0 +1,358 @@
+[
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "DBConfig",
+        "importPath": "app.core.config",
+        "description": "app.core.config",
+        "isExtraImport": true,
+        "detail": "app.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "DBConfig",
+        "importPath": "app.core.config",
+        "description": "app.core.config",
+        "isExtraImport": true,
+        "detail": "app.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "DBConfig",
+        "importPath": "app.core.config",
+        "description": "app.core.config",
+        "isExtraImport": true,
+        "detail": "app.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "DBConfig",
+        "importPath": "app.core.config",
+        "description": "app.core.config",
+        "isExtraImport": true,
+        "detail": "app.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "BackupProvider",
+        "importPath": "app.providers.base",
+        "description": "app.providers.base",
+        "isExtraImport": true,
+        "detail": "app.providers.base",
+        "documentation": {}
+    },
+    {
+        "label": "BackupProvider",
+        "importPath": "app.providers.base",
+        "description": "app.providers.base",
+        "isExtraImport": true,
+        "detail": "app.providers.base",
+        "documentation": {}
+    },
+    {
+        "label": "PostgresProvider",
+        "importPath": "app.providers.postgres",
+        "description": "app.providers.postgres",
+        "isExtraImport": true,
+        "detail": "app.providers.postgres",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "get_logger",
+        "importPath": "app.core.logger",
+        "description": "app.core.logger",
+        "isExtraImport": true,
+        "detail": "app.core.logger",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "typer",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "typer",
+        "description": "typer",
+        "detail": "typer",
+        "documentation": {}
+    },
+    {
+        "label": "get_provider",
+        "importPath": "app.providers.factory",
+        "description": "app.providers.factory",
+        "isExtraImport": true,
+        "detail": "app.providers.factory",
+        "documentation": {}
+    },
+    {
+        "label": "DBConfig",
+        "kind": 6,
+        "importPath": "app.core.config",
+        "description": "app.core.config",
+        "peekOfCode": "class DBConfig(BaseModel):\n    db_type: str\n    host: str = \"localhost\"\n    port: Optional[int] = None\n    username: Optional[str] = None\n    password: Optional[str] = Field(default=None, repr=False)  # keep password out of repr/logs\n    database: str\n    class Config:\n        # prevents accidental leakage of secrets when the model is printed/logged\n        str_strip_whitespace = True",
+        "detail": "app.core.config",
+        "documentation": {}
+    },
+    {
+        "label": "get_logger",
+        "kind": 2,
+        "importPath": "app.core.logger",
+        "description": "app.core.logger",
+        "peekOfCode": "def get_logger(name: str = \"dbbackup\") -> logging.Logger:\n    LOG_DIR.mkdir(parents=True, exist_ok=True)\n    logger = logging.getLogger(name)\n    if logger.handlers:\n        # avoid adding duplicate handlers if get_logger() is called more than once\n        return logger\n    logger.setLevel(logging.INFO)\n    formatter = logging.Formatter(\n        fmt=\"%(asctime)s | %(levelname)s | %(name)s | %(message)s\",\n        datefmt=\"%Y-%m-%d %H:%M:%S\", ",
+        "detail": "app.core.logger",
+        "documentation": {}
+    },
+    {
+        "label": "LOG_DIR",
+        "kind": 5,
+        "importPath": "app.core.logger",
+        "description": "app.core.logger",
+        "peekOfCode": "LOG_DIR = Path(\"./logs\")\nLOG_FILE = LOG_DIR / \"dbbackup.log\"\ndef get_logger(name: str = \"dbbackup\") -> logging.Logger:\n    LOG_DIR.mkdir(parents=True, exist_ok=True)\n    logger = logging.getLogger(name)\n    if logger.handlers:\n        # avoid adding duplicate handlers if get_logger() is called more than once\n        return logger\n    logger.setLevel(logging.INFO)\n    formatter = logging.Formatter(",
+        "detail": "app.core.logger",
+        "documentation": {}
+    },
+    {
+        "label": "LOG_FILE",
+        "kind": 5,
+        "importPath": "app.core.logger",
+        "description": "app.core.logger",
+        "peekOfCode": "LOG_FILE = LOG_DIR / \"dbbackup.log\"\ndef get_logger(name: str = \"dbbackup\") -> logging.Logger:\n    LOG_DIR.mkdir(parents=True, exist_ok=True)\n    logger = logging.getLogger(name)\n    if logger.handlers:\n        # avoid adding duplicate handlers if get_logger() is called more than once\n        return logger\n    logger.setLevel(logging.INFO)\n    formatter = logging.Formatter(\n        fmt=\"%(asctime)s | %(levelname)s | %(name)s | %(message)s\",",
+        "detail": "app.core.logger",
+        "documentation": {}
+    },
+    {
+        "label": "BackupProvider",
+        "kind": 6,
+        "importPath": "app.providers.base",
+        "description": "app.providers.base",
+        "peekOfCode": "class BackupProvider(ABC):\n    def __init__(self, config: DBConfig):\n        self.config = config\n    @abstractmethod\n    def test_connection(self) -> bool:\n        \"\"\"Return True if a connection can be established with the given config.\"\"\"\n        raise NotImplementedError\n    @abstractmethod\n    def backup(self, output_path: str) -> str:\n        \"\"\"Run the backup and return the path to the created backup file.\"\"\"",
+        "detail": "app.providers.base",
+        "documentation": {}
+    },
+    {
+        "label": "get_provider",
+        "kind": 2,
+        "importPath": "app.providers.factory",
+        "description": "app.providers.factory",
+        "peekOfCode": "def get_provider(db_type: str, config: DBConfig) -> BackupProvider:\n    provider_cls = PROVIDERS.get(db_type)\n    if provider_cls is None:\n        supported = \", \".join(PROVIDERS.keys())\n        raise ValueError(f\"Unsupported db_type '{db_type}'. Supported: {supported}\")\n    return provider_cls(config)",
+        "detail": "app.providers.factory",
+        "documentation": {}
+    },
+    {
+        "label": "PROVIDERS",
+        "kind": 5,
+        "importPath": "app.providers.factory",
+        "description": "app.providers.factory",
+        "peekOfCode": "PROVIDERS = {\n    \"postgres\": PostgresProvider,\n}\ndef get_provider(db_type: str, config: DBConfig) -> BackupProvider:\n    provider_cls = PROVIDERS.get(db_type)\n    if provider_cls is None:\n        supported = \", \".join(PROVIDERS.keys())\n        raise ValueError(f\"Unsupported db_type '{db_type}'. Supported: {supported}\")\n    return provider_cls(config)",
+        "detail": "app.providers.factory",
+        "documentation": {}
+    },
+    {
+        "label": "PostgresProvider",
+        "kind": 6,
+        "importPath": "app.providers.postgres",
+        "description": "app.providers.postgres",
+        "peekOfCode": "class PostgresProvider(BackupProvider):\n    def __init__(self, config: DBConfig):\n        super().__init__(config)\n        self._check_tools_installed()\n    def _check_tools_installed(self) -> None:\n        for tool in (\"psql\", \"pg_dump\", \"pg_restore\"):\n            if shutil.which(tool) is None:\n                raise EnvironmentError(\n                    f\"Required tool '{tool}' not found on PATH. \"\n                    f\"Install the postgresql-client package first.\"",
+        "detail": "app.providers.postgres",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "app.providers.postgres",
+        "description": "app.providers.postgres",
+        "peekOfCode": "logger = get_logger(__name__)\nclass PostgresProvider(BackupProvider):\n    def __init__(self, config: DBConfig):\n        super().__init__(config)\n        self._check_tools_installed()\n    def _check_tools_installed(self) -> None:\n        for tool in (\"psql\", \"pg_dump\", \"pg_restore\"):\n            if shutil.which(tool) is None:\n                raise EnvironmentError(\n                    f\"Required tool '{tool}' not found on PATH. \"",
+        "detail": "app.providers.postgres",
+        "documentation": {}
+    },
+    {
+        "label": "StorageBackend",
+        "kind": 6,
+        "importPath": "app.storage.base",
+        "description": "app.storage.base",
+        "peekOfCode": "class StorageBackend(ABC):\n    @abstractmethod\n    def save(self, file_path: str) -> str:\n        \"\"\"Persist the given local file to this backend, return its final location.\"\"\"\n        raise NotImplementedError\n    @abstractmethod\n    def list_backups(self) -> List[str]:\n        \"\"\"List available backup files in this backend.\"\"\"\n        raise NotImplementedError\n    @abstractmethod",
+        "detail": "app.storage.base",
+        "documentation": {}
+    },
+    {
+        "label": "DBType",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class DBType(str, Enum):\n    postgres = \"postgres\"\n    mysql = \"mysql\"\n    mongo = \"mongo\"\n    sqlite = \"sqlite\"\n@app.command(\"test-connection\")\ndef test_connection(\n    db_type: DBType = typer.Option(..., help=\"Type of database\"),\n    host: str = typer.Option(\"localhost\", help=\"Database host\"),\n    port: Optional[int] = typer.Option(None, help=\"Database port\"),",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "test_connection",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def test_connection(\n    db_type: DBType = typer.Option(..., help=\"Type of database\"),\n    host: str = typer.Option(\"localhost\", help=\"Database host\"),\n    port: Optional[int] = typer.Option(None, help=\"Database port\"),\n    username: Optional[str] = typer.Option(None, help=\"Database username\"),\n    password: Optional[str] = typer.Option(\n        None, prompt=True, hide_input=True, help=\"Database password\"\n    ),\n    database: str = typer.Option(..., help=\"Database name\"),\n):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "backup",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def backup(\n    db_type: DBType = typer.Option(..., help=\"Type of database\"),\n    host: str = typer.Option(\"localhost\", help=\"Database host\"),\n    port: Optional[int] = typer.Option(None, help=\"Database port\"),\n    username: Optional[str] = typer.Option(None, help=\"Database username\"),\n    password: Optional[str] = typer.Option(\n        None, prompt=True, hide_input=True, help=\"Database password\"\n    ),\n    database: str = typer.Option(..., help=\"Database name\"),\n    output_dir: str = typer.Option(\"./backups\", help=\"Local directory to store the backup\"),",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "restore",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def restore(\n    db_type: DBType = typer.Option(..., help=\"Type of database\"),\n    host: str = typer.Option(\"localhost\", help=\"Database host\"),\n    port: Optional[int] = typer.Option(None, help=\"Database port\"),\n    username: Optional[str] = typer.Option(None, help=\"Database username\"),\n    password: Optional[str] = typer.Option(\n        None, prompt=True, hide_input=True, help=\"Database password\"\n    ),\n    database: str = typer.Option(..., help=\"Database name\"),\n    backup_file: str = typer.Option(..., help=\"Path to the backup file to restore from\"),",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = typer.Typer(help=\"Database Backup Utility CLI\")\nclass DBType(str, Enum):\n    postgres = \"postgres\"\n    mysql = \"mysql\"\n    mongo = \"mongo\"\n    sqlite = \"sqlite\"\n@app.command(\"test-connection\")\ndef test_connection(\n    db_type: DBType = typer.Option(..., help=\"Type of database\"),\n    host: str = typer.Option(\"localhost\", help=\"Database host\"),",
+        "detail": "main",
+        "documentation": {}
+    }
+]

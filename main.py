@@ -1,7 +1,20 @@
+"""
+Database Backup Utility - CLI entrypoint
+
+Run:
+    python main.py --help
+    python main.py backup --help
+    python main.py restore --help
+    python main.py test-connection --help
+"""
+
 from enum import Enum
 from typing import Optional
 
 import typer
+
+from app.core.config import DBConfig
+from app.providers.factory import get_provider
 
 app = typer.Typer(help="Database Backup Utility CLI")
 
@@ -25,8 +38,22 @@ def test_connection(
     database: str = typer.Option(..., help="Database name"),
 ):
     """Validate connection parameters against the target database."""
-    typer.echo(f"[stub] Would test connection to {db_type} database '{database}' at {host}")
-    # TODO: build config -> pick provider -> call provider.test_connection()
+    config = DBConfig(
+        db_type=db_type.value, host=host, port=port,
+        username=username, password=password, database=database,
+    )
+    try:
+        provider = get_provider(db_type.value, config)
+    except (ValueError, EnvironmentError) as e:
+        typer.secho(f"✘ {e}", fg=typer.colors.RED)
+        raise typer.Exit(code=1)
+
+    ok = provider.test_connection()
+    if ok:
+        typer.secho(f"✔ Connection to '{database}' succeeded", fg=typer.colors.GREEN)
+    else:
+        typer.secho(f"✘ Connection to '{database}' failed", fg=typer.colors.RED)
+        raise typer.Exit(code=1)
 
 
 @app.command()
@@ -40,11 +67,20 @@ def backup(
     ),
     database: str = typer.Option(..., help="Database name"),
     output_dir: str = typer.Option("./backups", help="Local directory to store the backup"),
-    compress: bool = typer.Option(True, help="Compress the backup file"),
 ):
     """Backup a database."""
-    typer.echo(f"[stub] Would back up {db_type} database '{database}' -> {output_dir}")
-    # TODO: build config -> pick provider -> call provider.backup()
+    config = DBConfig(
+        db_type=db_type.value, host=host, port=port,
+        username=username, password=password, database=database,
+    )
+    try:
+        provider = get_provider(db_type.value, config)
+        backup_path = provider.backup(output_dir)
+    except (ValueError, RuntimeError, EnvironmentError) as e:
+        typer.secho(f"✘ Backup failed: {e}", fg=typer.colors.RED)
+        raise typer.Exit(code=1)
+
+    typer.secho(f"✔ Backup saved to {backup_path}", fg=typer.colors.GREEN)
 
 
 @app.command()
@@ -60,8 +96,18 @@ def restore(
     backup_file: str = typer.Option(..., help="Path to the backup file to restore from"),
 ):
     """Restore a database from a backup file."""
-    typer.echo(f"[stub] Would restore {db_type} database '{database}' from {backup_file}")
-    # TODO: build config -> pick provider -> call provider.restore()
+    config = DBConfig(
+        db_type=db_type.value, host=host, port=port,
+        username=username, password=password, database=database,
+    )
+    try:
+        provider = get_provider(db_type.value, config)
+        provider.restore(backup_file)
+    except (ValueError, RuntimeError, EnvironmentError, FileNotFoundError) as e:
+        typer.secho(f"✘ Restore failed: {e}", fg=typer.colors.RED)
+        raise typer.Exit(code=1)
+
+    typer.secho(f"✔ Restored '{database}' from {backup_file}", fg=typer.colors.GREEN)
 
 
 if __name__ == "__main__":
